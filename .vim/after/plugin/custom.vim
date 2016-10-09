@@ -47,8 +47,8 @@ endif
 
 " GUI尝试使用自定义字体
 if has('gui_running')
-    set guifont=DejaVu_Sans_Mono:h12:cDEFAULT,WenQuanYi_Micro_Hei:h12:cDEFAULT,Microsoft_Yahei:h12:cDEFAULT,Yahei_Mono:h12:cDEFAULT,simhei:h12:cDEFAULT
-    set guifontwide=DejaVu_Sans_Mono:h12:cDEFAULT,WenQuanYi_Micro_Hei_Mono:h12:cDEFAULT,Yahei_Mono:h12:cDEFAULT,Microsoft_Yahei_UI:h12:cDEFAULT,simhei:h12:cDEFAULT
+    set guifont=Noto_Mono:h12:cDEFAULT,DejaVu_Sans_Mono:h12:cDEFAULT,Noto_Sans_Mono_CJK_SC:h12:cDEFAULT,WenQuanYi_Micro_Hei:h12:cDEFAULT,Microsoft_Yahei:h12:cDEFAULT,Yahei_Mono:h12:cDEFAULT,simhei:h12:cDEFAULT
+    set guifontwide=Noto_Mono:h12:cDEFAULT,DejaVu_Sans_Mono:h12:cDEFAULT,Noto_Sans_Mono_CJK_SC:h12:cDEFAULT,WenQuanYi_Micro_Hei_Mono:h12:cDEFAULT,Yahei_Mono:h12:cDEFAULT,Microsoft_Yahei_UI:h12:cDEFAULT,simhei:h12:cDEFAULT
 endif
 
 " GUI设置窗口大小
