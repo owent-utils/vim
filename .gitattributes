@@ -1,4 +1,7 @@
 *.sh eol=lf
+*.zsh eol=lf
 *.py eol=lf
-*.vimrc eol=lf
-*.conf eol=lf
+.vimrc eol=lf
+*.vim eol=lf
+*.zshrc eol=lf
+.bash_profile eol=lf
