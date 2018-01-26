@@ -1,7 +1,12 @@
 # FIX-WSL: *:*: nice(5) failed: operation not permitted
 unsetopt BG_NICE
 
-source /home/owent/antigen.zsh
+if [ ! -e ~/antigen.zsh ] ; then
+    curl -L git.io/antigen > ~/antigen.zsh
+    chmod +x ~/antigen.zsh
+fi
+
+source ~/antigen.zsh
 
 # Load the oh-my-zsh's library. 
 antigen use oh-my-zsh  
