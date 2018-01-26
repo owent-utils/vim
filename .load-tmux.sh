@@ -1,4 +1,5 @@
-TMUX_BIN=/mnt/d/workspace/prebuilt/wsl/tmux/bin/tmux;
+# TMUX_BIN=/mnt/d/workspace/prebuilt/wsl/tmux/bin/tmux;
+TMUX_BIN=tmux ;
 
 if [ -z "$TMUX" ]; then
     TMUX_SESSIONS="$($TMUX_BIN list-sessions | grep -v attached)";
