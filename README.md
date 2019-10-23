@@ -12,7 +12,7 @@ curl -k -L https://dl.sourceforge.net/project/zsh/zsh/$ZSH_VERSION/zsh-$ZSH_VERS
 tar -axvf zsh-$ZSH_VERSION.tar.xz ;
 cd zsh-$ZSH_VERSION ;
 
-autoreconf --install ;
+# autoreconf --install ;
 
 SUFFIX_FLAGS="";
 PREFIX_OPTIONS=;
