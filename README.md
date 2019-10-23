@@ -7,8 +7,10 @@
 # require ncurses-devel/ncurses-static/libncurses5-dev/libncursesw5-dev
 ZSH_VERSION=5.7.1 ;
 
-curl -k -L https://github.com/zsh-users/zsh/archive/zsh-$ZSH_VERSION.tar.gz -O zsh-$ZSH_VERSION.tar.gz ;
-cd zsh-zsh-$ZSH_VERSION ;
+# https://github.com/zsh-users/zsh
+curl -k -L https://dl.sourceforge.net/project/zsh/zsh/$ZSH_VERSION/zsh-$ZSH_VERSION.tar.xz -O zsh-$ZSH_VERSION.tar.xz ;
+tar -axvf zsh-$ZSH_VERSION.tar.xz ;
+cd zsh-$ZSH_VERSION ;
 
 autoreconf --install ;
 
