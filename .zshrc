@@ -31,7 +31,8 @@ bindkey "\e[F" end-of-line
 bindkey '^i' expand-or-complete-prefix
 
 if [ ! -e ~/antigen.zsh ] ; then
-    curl -L git.io/antigen > ~/antigen.zsh
+    # curl -L git.io/antigen > ~/antigen.zsh
+    curl -L https://github.com/zsh-users/antigen/releases/download/latest/antigen.zsh -O ~/antigen.zsh
     chmod +x ~/antigen.zsh
 fi
 
