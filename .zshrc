@@ -32,7 +32,8 @@ bindkey '^i' expand-or-complete-prefix
 
 if [ ! -e ~/antigen.zsh ] ; then
     # curl -L git.io/antigen > ~/antigen.zsh
-    curl -L https://github.com/zsh-users/antigen/releases/download/latest/antigen.zsh -O ~/antigen.zsh
+    LATEST_TAG_NAME="$(curl -s https://api.github.com/repos/zsh-users/antigen/releases/latest --connect-timeout 10| grep 'tag_name' | cut -d\" -f4)";
+    curl -L https://github.com/zsh-users/antigen/releases/download/$LATEST_TAG_NAME/antigen.zsh -O ~/antigen.zsh
     chmod +x ~/antigen.zsh
 fi
 
