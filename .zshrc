@@ -49,7 +49,6 @@ source ~/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-# antigen bundle git
 # antigen bundle svn
 antigen bundle tmux
 antigen bundle heroku
@@ -106,11 +105,13 @@ ZSH_HIGHLIGHT_STYLES[assign]=none
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Tell Antigen that you're done.
-antigen apply
-
 # disable git status
 which git > /dev/null 2>&1;
-if [ $? -eq 0 ]; then
-   git config --global oh-my-zsh.hide-status 1;
+if [[ $? -eq 0 ]]; then
+    antigen bundle git ;
+    antigen bundle git-prompt ;
+    # git config --global oh-my-zsh.hide-status 1;
 fi
+
+# Tell Antigen that you're done.
+antigen apply
