@@ -1,0 +1,128 @@
+{
+  "customPresetColors": [
+    "4276aa",
+    "178aa1",
+    "40a693",
+    "5268a5",
+    "5e5ca2",
+    "778495",
+    "c00000",
+    "3d3d3d",
+    "bfbfbf",
+    "f0f0f0",
+    "586270",
+    "400000"
+  ],
+  "customFonts": [
+    "Fira Code Retina",
+    "Fira Code",
+    "Noto Sans Mono",
+    "DejaVu Sans Mono",
+    "Noto Mono",
+    "Noto Sans Mono CJK SC",
+    "YaHei Consolas Hybrid",
+    "Source Code Pro",
+    "Microsoft YaHei",
+    "Consolas",
+    "Sans"
+  ],
+  "customColorSchemes": [
+    [
+      {},
+      {
+        "fill": "#40a693",
+        "stroke": "#178aa1",
+        "font": "#f0f0f0"
+      },
+      {
+        "fill": "#5268a5",
+        "stroke": "#5e5ca2",
+        "font": "#f0f0f0"
+      },
+      {
+        "fill": "#f0f0f0",
+        "stroke": "#586270",
+        "font": "#3d3d3d"
+      },
+      {
+        "fill": "#5e5ca2",
+        "stroke": "#3d3d3d",
+        "font": "#f0f0f0"
+      },
+      {
+        "fill": "#c00000",
+        "stroke": "#400000",
+        "font": "#f0f0f0"
+      },
+      {
+        "fill": "#3d3d3d",
+        "stroke": "#000000",
+        "font": "#f0f0f0"
+      },
+      {
+        "fill": "#bfbfbf",
+        "stroke": "#586270",
+        "font": "#000000"
+      }
+    ],
+    [
+      {},
+      {
+        "fill": "none",
+        "stroke": "#4276aa",
+        "font": "#3d3d3d"
+      },
+      {
+        "fill": "none",
+        "stroke": "#5e5ca2",
+        "font": "#3d3d3d"
+      },
+      {
+        "fill": "none",
+        "stroke": "#c00000",
+        "font": "#3d3d3d"
+      },
+      {
+        "fill": "none",
+        "stroke": "#40a693",
+        "font": "#3d3d3d"
+      },
+      {
+        "fill": "none",
+        "stroke": "#178aa1",
+        "font": "#3d3d3d"
+      },
+      {
+        "fill": "none",
+        "stroke": "#586270",
+        "font": "#3d3d3d"
+      },
+      {
+        "fill": "none",
+        "stroke": "#5268a5",
+        "font": "#3d3d3d"
+      }
+    ]
+  ],
+  "defaultVertexStyle": {
+    "fontFamily": "Fira Code Retina",
+    "fontSize": "16",
+    "strokeWidth": "1",
+    "arcSize": "10",
+    "absoluteArcSize": "1",
+    "rounded": "1",
+    "shadow": "0",
+    "comic": "0"
+  },
+  "defaultEdgeStyle": {
+    "fontFamily": "Fira Code Retina",
+    "fontSize": "16",
+    "strokeWidth": "1",
+    "arcSize": "10",
+    "absoluteArcSize": "1",
+    "rounded": "1",
+    "shadow": "0",
+    "comic": "0"
+  },
+  "fontCss": ""
+}
