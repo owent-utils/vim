@@ -14,7 +14,7 @@ terminal:
       - '#560088'
       - '#0e717c'
       - '#efefef'
-      - '#82822'
+      - '#828282'
       - '#e83b3f'
       - '#7aba3a'
       - '#ffea2e'
@@ -26,38 +26,12 @@ terminal:
     Fira Code Retina, Noto Sans Mono, DejaVu Sans Mono, Noto Mono, Noto Sans
     Mono CJK SC, YaHei Consolas Hybrid,Source Code Pro,Microsoft YaHei,
     Consolas, serif
-  ligatures: true
   fontSize: 16
-  background: colorScheme
-  environment: {}
-  profile: default-(wsl-/-default-distro)
-  pasteOnMiddleClick: true
-  copyOnSelect: true
-  rightClick: paste
+  ligatures: true
   altIsMeta: true
-  frontend: xterm
+  background: colorScheme
+  fallbackFont: ''
   customColorSchemes:
-    - name: Darkside
-      foreground: '#bababa'
-      background: '#222324'
-      cursor: '#bbbbbb'
-      colors:
-        - '#000000'
-        - '#e8341c'
-        - '#68c256'
-        - '#f2d42c'
-        - '#1c98e8'
-        - '#8e69c9'
-        - '#1c98e8'
-        - '#bababa'
-        - '#404040'
-        - '#e05a4f'
-        - '#77b869'
-        - '#efd64b'
-        - '#387cd3'
-        - '#957bbe'
-        - '#3d97e2'
-        - '#bababa'
     - name: MaterialDark
       foreground: '#e5e5e5'
       background: '#232322'
@@ -71,7 +45,7 @@ terminal:
         - '#560088'
         - '#0e717c'
         - '#efefef'
-        - '#82822'
+        - '#828282'
         - '#e83b3f'
         - '#7aba3a'
         - '#ffea2e'
@@ -79,31 +53,43 @@ terminal:
         - '#aa4dbc'
         - '#26bbd1'
         - '#d9d9d9'
-  profiles:
-    - name: WSL / Ubuntu-20.04
-      shell: wsl
-      sessionOptions:
-        command: C:\WINDOWS\system32\wsl.exe
-        args:
-          - '-d'
-          - Ubuntu
-        env:
-          TERM: xterm-color
-          COLORTERM: truecolor
-  bell: 'off'
+  profile: local:undefined
+  rightClick: menu
+  pasteOnMiddleClick: true
 hotkeys:
   profile: {}
   shell: {}
   home: []
   end: []
+  toggle-window:
+    - Ctrl-Space
 serial: {}
+ssh: {}
 appearance:
-  theme: Standard
-  opacity: 1
-  frame: thin
   vibrancyType: fluent
   vibrancy: false
-enableWelcomeTab: false
+version: 3
+profiles:
+  - name: PowerShell Core
+    shell: powershell
+    options:
+      command: pwsh.exe
+      args:
+        - '-nologo'
+      env:
+        TERM: cygwin
+    type: local
+    id: local:custom:a3e1f2e9-8813-4d7b-b872-b0a768ba50ff
+    icon: >-
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+      class="svg-inline--fa fa-terminal fa-w-20 fa-2x" data-icon="terminal"
+      data-prefix="fas" focusable="false" role="img" viewBox="0 0 640 512"><path
+      fill="#0ff" stroke="none" stroke-width="1" d="M257.981 272.971L63.638
+      467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029
+      444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99
+      101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373
+      24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0
+      33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24
+      24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745
+      24-24z"></path></svg>
 pluginBlacklist: []
-enableAnalytics: false
-enableAutomaticUpdates: false
