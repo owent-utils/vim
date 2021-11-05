@@ -34,7 +34,7 @@ if [[ ! -e ~/antigen.zsh ]] ; then
     # curl -k -L --retry 10 --retry-max-time 1800 git.io/antigen > ~/antigen.zsh ;
     #if [[ 0 -ne $? ]]; then
         LATEST_TAG_NAME="$(curl -s -L https://api.github.com/repos/zsh-users/antigen/releases/latest --connect-timeout 10 | grep 'tag_name' | grep -o -E 'v?[0-9]\.[v0-9\.]+' | head -n 1 )";
-        curl -k -L --retry 10 --retry-max-time 1800 https://github.com/zsh-users/antigen/releases/download/$LATEST_TAG_NAME/antigen.zsh -O ~/antigen.zsh ;
+        curl -k -L --retry 10 --retry-max-time 1800 https://github.com/zsh-users/antigen/releases/download/$LATEST_TAG_NAME/antigen.zsh -o ~/antigen.zsh ;
 
         if [[ 0 -ne $? ]] && [[ -e ~/antigen.zsh ]]; then
             rm -f ~/antigen.zsh;
