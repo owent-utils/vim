@@ -1,6 +1,6 @@
 " 第一行设置tab键为4个空格，第二行设置当行之间交错时使用4个空格 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 " 用空格键替换制表符 
 set expandtab
