@@ -110,7 +110,8 @@ which git > /dev/null 2>&1;
 if [[ $? -eq 0 ]]; then
     antigen bundle git ;
     antigen bundle git-prompt ;
-    # git config --global oh-my-zsh.hide-status 1;
+    git config --global oh-my-zsh.hide-status 1
+    git config --global oh-my-zsh.hide-info 1
 fi
 
 # Tell Antigen that you're done.
