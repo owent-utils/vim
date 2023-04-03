@@ -23,36 +23,14 @@ terminal:
       - '#26bbd1'
       - '#d9d9d9'
   font: >-
-    Fira Code Retina, Noto Sans Mono, DejaVu Sans Mono, Noto Mono, Noto Sans
-    Mono CJK SC, YaHei Consolas Hybrid,Source Code Pro,Microsoft YaHei,
+    等距更纱黑体 SC Semibold, Sarasa Mono CL Semibold, Noto Sans
+    Mono CJK SC, YaHei Consolas Hybrid, Noto Sans Mono, DejaVu Sans Mono, Noto Mono, Source Code Pro,Microsoft YaHei,
     Consolas, serif
-  fontSize: 16
+  fontSize: 20
   ligatures: true
   altIsMeta: true
   background: colorScheme
   fallbackFont: ''
-  customColorSchemes:
-    - name: MaterialDark
-      foreground: '#e5e5e5'
-      background: '#232322'
-      cursor: '#16afca'
-      colors:
-        - '#212121'
-        - '#b7141f'
-        - '#457b24'
-        - '#f6981e'
-        - '#134eb2'
-        - '#560088'
-        - '#0e717c'
-        - '#efefef'
-        - '#828282'
-        - '#e83b3f'
-        - '#7aba3a'
-        - '#ffea2e'
-        - '#54a4f3'
-        - '#aa4dbc'
-        - '#26bbd1'
-        - '#d9d9d9'
   profile: local:undefined
   rightClick: menu
   pasteOnMiddleClick: true
