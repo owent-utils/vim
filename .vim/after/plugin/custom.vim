@@ -9,15 +9,22 @@ set expandtab
 set showmatch
 
 " 背景及配色方案 
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+" if has('gui_running')
+"     set background=light
+" else
+"     set background=dark
+" endif
 
 " 设置配色，这里选择的是desert，也有其他方案，在vim中输入:color 在敲tab键可以查看 
 " color desert
 " colorscheme solarized
+
+if has('gui_running')
+    set background=dark
+    " https://github.com/tomasr/molokai/blob/master/colors/molokai.vim
+    color molokai
+    set termguicolors
+endif
 
 "传说中的去掉边框用下边这一句
 set go=
@@ -47,8 +54,10 @@ endif
 
 " GUI尝试使用自定义字体
 if has('gui_running')
-    set guifont=Noto_Mono:h12:cDEFAULT,DejaVu_Sans_Mono:h12:cDEFAULT,Noto_Sans_Mono_CJK_SC:h12:cDEFAULT,WenQuanYi_Micro_Hei:h12:cDEFAULT,Microsoft_Yahei:h12:cDEFAULT,Yahei_Mono:h12:cDEFAULT,simhei:h12:cDEFAULT
-    set guifontwide=Noto_Mono:h12:cDEFAULT,DejaVu_Sans_Mono:h12:cDEFAULT,Noto_Sans_Mono_CJK_SC:h12:cDEFAULT,WenQuanYi_Micro_Hei_Mono:h12:cDEFAULT,Yahei_Mono:h12:cDEFAULT,Microsoft_Yahei_UI:h12:cDEFAULT,simhei:h12:cDEFAULT
+    " set guifont=* 选择字体
+    " set guifont?  查看当前字体
+    set guifont=等距更纱黑体_SC:h18:cDEFAULT,Noto_Mono:h18:cDEFAULT,Noto_Sans_Mono_CJK_SC:h18:cDEFAULT,Microsoft_Yahei:h18:cDEFAULT,Yahei_Mono:h18:cDEFAULT,simhei:h18:cDEFAULT
+    set guifontwide=等距更纱黑体_SC:h18:cDEFAULT,Noto_Mono:h18:cDEFAULT,Noto_Sans_Mono_CJK_SC:h18:cDEFAULT,Yahei_Mono:h18:cDEFAULT,Microsoft_Yahei_UI:h18:cDEFAULT,simhei:h18:cDEFAULT
 endif
 
 " GUI设置窗口大小
