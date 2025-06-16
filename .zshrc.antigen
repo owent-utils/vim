@@ -30,15 +30,14 @@ bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
 
-if [[ ! -e ~/antigen.zsh ]] ; then
+if [[ ! -e ~/antigen.zsh ]]; then
     # curl -k -L --retry 10 --retry-max-time 1800 git.io/antigen > ~/antigen.zsh ;
     #if [[ 0 -ne $? ]]; then
-        LATEST_TAG_NAME="$(curl -s -L https://api.github.com/repos/zsh-users/antigen/releases/latest --connect-timeout 10 | grep 'tag_name' | grep -o -E 'v?[0-9]\.[v0-9\.]+' | head -n 1 )";
-        curl -k -L --retry 10 --retry-max-time 1800 https://github.com/zsh-users/antigen/releases/download/$LATEST_TAG_NAME/antigen.zsh -o ~/antigen.zsh ;
-
-        if [[ 0 -ne $? ]] && [[ -e ~/antigen.zsh ]]; then
-            rm -f ~/antigen.zsh;
-        fi
+    LATEST_TAG_NAME="$(curl -s -L https://api.github.com/repos/zsh-users/antigen/releases/latest --connect-timeout 10 | grep 'tag_name' | grep -o -E 'v?[0-9]\.[v0-9\.]+' | head -n 1)"
+    curl -k -L --retry 10 --retry-max-time 1800 https://github.com/zsh-users/antigen/releases/download/$LATEST_TAG_NAME/antigen.zsh -o ~/antigen.zsh
+    if [[ 0 -ne $? ]] && [[ -e ~/antigen.zsh ]]; then
+        rm -f ~/antigen.zsh
+    fi
     #fi
     chmod +x ~/antigen.zsh
 fi
@@ -53,7 +52,7 @@ antigen use oh-my-zsh
 antigen bundle tmux
 antigen bundle heroku
 # antigen bundle pip
-antigen bundle lein
+# antigen bundle lein
 antigen bundle command-not-found
 antigen bundle colored-man-pages
 antigen bundle man
@@ -68,7 +67,6 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 # antigen bundle supercrabtree/k
 
-
 # Load the theme.
 antigen theme ys
 
@@ -81,37 +79,38 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 # ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
 
 ZSH_HIGHLIGHT_STYLES[default]=none
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=009
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=009,standout
+ZSH_HIGHLIGHT_STYLES[unknown - token]=fg=009
+ZSH_HIGHLIGHT_STYLES[reserved - word]=fg=009,standout
 ZSH_HIGHLIGHT_STYLES[alias]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[builtin]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[function]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[command]=fg=white,bold
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=white,underline
 ZSH_HIGHLIGHT_STYLES[commandseparator]=none
-ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=009
+ZSH_HIGHLIGHT_STYLES[hashed - command]=fg=009
 ZSH_HIGHLIGHT_STYLES[path]=fg=214,underline
 ZSH_HIGHLIGHT_STYLES[globbing]=fg=063
-ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=063
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=063
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=009
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=009
+ZSH_HIGHLIGHT_STYLES[history - expansion]=fg=white,underline
+ZSH_HIGHLIGHT_STYLES[single - hyphen - option]=none
+ZSH_HIGHLIGHT_STYLES[double - hyphen - option]=none
+ZSH_HIGHLIGHT_STYLES[back - quoted - argument]=none
+ZSH_HIGHLIGHT_STYLES[single - quoted - argument]=fg=063
+ZSH_HIGHLIGHT_STYLES[double - quoted - argument]=fg=063
+ZSH_HIGHLIGHT_STYLES[dollar - double - quoted - argument]=fg=009
+ZSH_HIGHLIGHT_STYLES[back - double - quoted - argument]=fg=009
 ZSH_HIGHLIGHT_STYLES[assign]=none
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # disable git status
-which git > /dev/null 2>&1;
+which git >/dev/null 2>&1
 if [[ $? -eq 0 ]]; then
-    antigen bundle git ;
-    antigen bundle git-prompt ;
+    antigen bundle git
+    antigen bundle git-prompt
     git config --global oh-my-zsh.hide-status 1
     git config --global oh-my-zsh.hide-info 1
+    git config --global oh-my-zsh.hide-dirty 1
 fi
 
 # Tell Antigen that you're done.
