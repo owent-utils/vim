@@ -1,0 +1,89 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent_buffer_font_size": 16.0,
+  "ui_font_family": "更纱黑体 UI SC",
+  "prettier": {
+    "allowed": true
+  },
+  "icon_theme": "Material Icon Theme",
+  "terminal": {
+    "font_size": 20.0,
+    "font_family": "Maple Mono Normal NF CN",
+    "font_fallbacks": [
+      "Maple Mono NF CN",
+      "Maple Mono Normal CN",
+      "Maple Mono CN",
+      "等距更纱黑体 SC",
+      "Sarasa Mono SC",
+      "Sarasa Mono CL",
+      "Noto Sans Mono CJK SC",
+      "Noto Sans Mono",
+      "Noto Mono",
+      "Source Code Pro",
+      "Consolas",
+      "monospace"
+    ]
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+  "base_keymap": "VSCode",
+  "agent": {
+    "always_allow_tool_actions": false,
+    "inline_assistant_model": {
+      "provider": "openrouter",
+      "model": "openai/gpt-5-mini"
+    },
+    "default_model": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.5"
+    },
+    "enabled": true,
+    "button": true,
+    "model_parameters": []
+  },
+  "minimap": {
+    "show": "auto"
+  },
+  "buffer_font_fallbacks": [
+    "Maple Mono NF CN",
+    "Maple Mono Normal CN",
+    "Maple Mono CN",
+    "等距更纱黑体 SC",
+    "Sarasa Mono SC",
+    "Sarasa Mono CL",
+    "Noto Sans Mono CJK SC",
+    "Noto Sans Mono",
+    "Noto Mono",
+    "Source Code Pro",
+    "Consolas",
+    "monospace"
+  ],
+  "buffer_font_family": "Maple Mono Normal NF CN",
+  "file_types": {
+    "bat": ["*.bat.in", "*.bat.mako"],
+    "cmake": ["*.cmake.in"],
+    "html": ["*.ejs"],
+    "cpp": ["*.h.in", "*.hpp.in", "*.cpp.in", "*.cxx.in", "*.cc.in"],
+    "shell": ["*.sh.in", "*.sh.mako"],
+    "powershell": ["*.ps1.in", "*.ps1.mako"]
+  },
+  "show_edit_predictions": true,
+  "hard_tabs": false,
+  "tab_size": 2,
+  "ui_font_size": 18.0,
+  "buffer_font_size": 20.0,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "VSCode Dark Modern"
+  }
+}
