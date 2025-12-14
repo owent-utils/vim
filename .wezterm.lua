@@ -56,9 +56,9 @@ local ssh_domains = {
   ssh('Dreame.cloud', 'aliyun-hk-01.m-oa.com(owent)', 'aliyun-hk-01.m-oa.com', 36000, 'owent'),
   ssh('Dreame.cloud', 'aliyun-hk-02.m-oa.com(owent)', 'aliyun-hk-02.m-oa.com', 36000, 'owent'),
   ssh('Dreame.cloud', 'aliyun-sg-01.m-oa.com(owent)', 'aliyun-sg-01.m-oa.com', 36000, 'owent'),
-  ssh('Dreame.cloud', 'aliyun-sg-01.m-oa.com(owent)', 'aliyun-sg-02.m-oa.com', 36000, 'owent'),
+  ssh('Dreame.cloud', 'aliyun-sg-02.m-oa.com(owent)', 'aliyun-sg-02.m-oa.com', 36000, 'owent'),
   ssh('Dreame.cloud', 'aliyun-jp-01.m-oa.com(owent)', 'aliyun-jp-01.m-oa.com', 36000, 'owent'),
-  ssh('Dreame.cloud', 'aliyun-jp-01.m-oa.com(owent)', 'aliyun-jp-02.m-oa.com', 36000, 'owent'),
+  ssh('Dreame.cloud', 'aliyun-jp-02.m-oa.com(owent)', 'aliyun-jp-02.m-oa.com', 36000, 'owent'),
 
   -- Dreame.devnet.local
   ssh('Dreame.devnet', '10.64.0.1(owent@router-main)', '10.64.0.1', 36000, 'owent'),
@@ -103,7 +103,10 @@ return {
     { family = 'Maple Mono Normal NF CN' },
     { family = '等距更纱黑体 SC' },
   }),
-  font_size = 20.0,
+  font_size = 16.0,
+
+  initial_cols = 160,
+  initial_rows = 40,
 
   color_schemes = {
     PencilDark = {
@@ -218,19 +221,15 @@ return {
 
     -- command selector: Ctrl-Shift-P
     { key = 'P',          mods = 'CTRL|SHIFT', action = act.ActivateCommandPalette },
-
-    -- profile selector / switch-profile：WezTerm 用 Launcher 替代
-    { key = 'E',          mods = 'CTRL|SHIFT', action = act.ShowLauncher },
-    { key = 'T',          mods = 'CTRL|ALT',   action = act.ShowLauncher },
-    { key = ',',          mods = 'CTRL',       action = act.ShowLauncher },
   },
 
   mouse_bindings = {
     -- Tabby: pasteOnMiddleClick = true
-    { event = { Down = { streak = 1, button = 'Middle' } }, mods = 'NONE', action = act.PasteFrom 'Clipboard' },
+    { event = { Down = { streak = 1, button = 'Middle' } }, mods = 'NONE', action = act.ActivateCommandPalette },
     -- Ctrl + Right = launcher
-    { event = { Down = { streak = 1, button = 'Right' } },  mods = 'CTRL', action = act.ShowLauncher },
-    { event = { Up = { streak = 1, button = 'Right' } },    mods = 'CTRL', action = act.Nop },
+    -- Use mouse button release to avoid the release-click immediately dismissing the launcher
+    { event = { Down = { streak = 1, button = 'Right' } },  mods = 'CTRL', action = act.Nop },
+    { event = { Up = { streak = 1, button = 'Right' } },    mods = 'CTRL', action = act.ShowLauncher },
     -- Right = paste
     { event = { Down = { streak = 1, button = 'Right' } },  mods = 'NONE', action = act.PasteFrom 'Clipboard' },
     { event = { Up = { streak = 1, button = 'Right' } },    mods = 'NONE', action = act.Nop },
