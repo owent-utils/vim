@@ -61,7 +61,19 @@ local ssh_domains = {
   ssh('Dreame.cloud', 'aliyun-jp-02.m-oa.com(owent)', 'aliyun-jp-02.m-oa.com', 36000, 'owent'),
 
   -- Dreame.devnet.local
-  ssh('Dreame.devnet', '10.64.0.1(owent@router-main)', '10.64.0.1', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.64.0.1(owent@router-main)', '10.64.0.1', 36000, 'owent', 'D:/workspace/keys/id_ed25519.it'),
+  ssh('Dreame.devnet', '10.64.8.2(owent@ci-linux)', '10.64.8.2', 36000, 'owent', 'D:/workspace/keys/id_ed25519.it'),
+  ssh('Dreame.devnet', '10.64.0.254(owent@debian-template)', '10.64.0.254', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.64.3.1(owent@it-auth)', '10.64.3.1', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.64.3.64(owent@it-db)', '10.64.3.64', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.64.3.128(owent@it-s3)', '10.64.3.128', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.64.5.1(owent@it-vcs)', '10.64.5.1', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.68.0.0(owent@k8s-template)', '10.68.0.0', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.68.0.1(owent@k8s-master-01)', '10.68.0.1', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.68.0.2(owent@k8s-master-02)', '10.68.0.2', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.68.0.3(owent@k8s-master-03)', '10.68.0.3', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.68.64.1(owent@k8s-agent-01)', '10.68.64.1', 36000, 'owent'),
+  ssh('Dreame.devnet', '10.68.64.2(owent@k8s-agent-02)', '10.68.64.2', 36000, 'owent'),
 
   -- Dreame.devnet.remote
   ssh('Dreame.devnet', 'public-gateway.m-oa.com(owent@router-main)', 'public-gateway.m-oa.com', 36000, 'owent'),
@@ -221,6 +233,9 @@ return {
 
     -- command selector: Ctrl-Shift-P
     { key = 'P',          mods = 'CTRL|SHIFT', action = act.ActivateCommandPalette },
+
+    -- command selector: Ctrl-Shift-T
+    { key = 'T',          mods = 'CTRL|SHIFT', action = act.ShowLauncher },
   },
 
   mouse_bindings = {
